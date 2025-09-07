@@ -1,15 +1,18 @@
 body {
   font-family: 'Inter', sans-serif;
+  background-color: #ffffff; /* White background */
+  color: #0f1419; /* Dark text */
 }
 
+/* Sidebar */
 .sidebar {
   position: fixed;
   height: 100vh;
   width: 260px;
   padding: 1rem;
   border-right: 1px solid #e6ecf0;
+  background-color: #fff;
 }
-
 .sidebar a {
   display: flex;
   align-items: center;
@@ -21,12 +24,10 @@ body {
   text-decoration: none;
   transition: background 0.2s;
 }
-
 .sidebar a:hover {
   background-color: rgba(29, 155, 240, 0.1);
   color: #1d9bf0;
 }
-
 .tweet-btn {
   background-color: #1d9bf0;
   color: #fff;
@@ -36,14 +37,10 @@ body {
   width: 100%;
   text-align: center;
   margin-top: 1rem;
-  display: block;
 }
-
 .tweet-btn:hover {
   background-color: #1a8cd8;
-  color: #fff;
 }
-
 .profile-actions {
   position: absolute;
   bottom: 1rem;
@@ -56,15 +53,102 @@ body {
   border-radius: 25px;
   transition: background 0.2s;
 }
-
 .profile-actions:hover {
   background-color: rgba(29, 155, 240, 0.1);
 }
-
 .profile-pic {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   object-fit: cover;
+  border: none;
 }
 
+/* Title Bar */
+.title-bar {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  border-bottom: 1px solid #e6ecf0;
+  z-index: 10;
+}
+.title-bar h5 {
+  color: #0f1419;
+}
+.title-bar i {
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.title-bar i:hover {
+  color: #1d9bf0;
+}
+
+/* Post Tweet Section */
+.post-tweet {
+  border-bottom: 1px solid #e6ecf0;
+}
+.post-tweet .tweet-input {
+  border: none;
+  resize: none;
+  font-size: 18px;
+  background-color: #fff;
+  color: #0f1419;
+}
+.post-tweet .tweet-input::placeholder {
+  color: #657786;
+}
+.post-tweet .tweet-input:focus {
+  box-shadow: none;
+  outline: none;
+}
+.tweet-icons i {
+  cursor: pointer;
+}
+.tweet-icons i:hover {
+  color: #1a8cd8;
+}
+
+/* Tweets */
+.tweet {
+  transition: background 0.2s;
+  border-bottom: 1px solid #e6ecf0;
+}
+.tweet:hover {
+  background: #f7f9f9;
+}
+.tweet p, .tweet strong, .tweet span {
+  color: #0f1419;
+}
+.tweet span.text-muted {
+  color: #657786;
+}
+.tweet-actions i {
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.tweet-actions i:hover {
+  color: #1d9bf0;
+}
+
+/* Right Sidebar */
+.right-sidebar {
+  max-height: 100vh;
+  overflow-y: auto;
+  background-color: #fff;
+}
+.trending, .who-to-follow {
+  background-color: #f7f9f9;
+  color: #0f1419;
+}
+.trending small, .who-to-follow .text-muted {
+  color: #657786;
+}
+button.btn-outline-dark {
+  color: #0f1419;
+  border-color: #e6ecf0;
+}
+button.btn-outline-dark:hover {
+  background-color: #e6ecf0;
+  border-color: #1d9bf0;
+  color: #1d9bf0;
+}

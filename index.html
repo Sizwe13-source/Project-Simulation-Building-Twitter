@@ -12,40 +12,237 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <!-- External CSS -->
   <link rel="stylesheet" href="style.css">
+  <!-- Twitter Favicon -->
+  <link rel="icon" href="https://abs.twimg.com/favicons/twitter.ico" type="image/x-icon">
 </head>
 <body>
 
-  <div class="sidebar d-flex flex-column">
-    <!-- Twitter Logo -->
-    <a href="#">
-      <i class="bi bi-twitter fs-2 text-primary"></i>
-    </a>
+<div class="container-fluid">
+  <div class="row">
 
-    <!-- Nav Items -->
-    <a href="#"><i class="bi bi-house-door-fill"></i> Home</a>
-    <a href="#"><i class="bi bi-hash"></i> Explore</a>
-    <a href="#"><i class="bi bi-bell"></i> Notifications</a>
-    <a href="#"><i class="bi bi-envelope"></i> Messages</a>
-    <a href="#"><i class="bi bi-bookmark"></i> Bookmarks</a>
-    <a href="#"><i class="bi bi-card-list"></i> Lists</a>
-    <a href="#"><i class="bi bi-person"></i> Profile</a>
-    <a href="#"><i class="bi bi-three-dots"></i> More</a>
-
-    <!-- Tweet Button -->
-    <a href="#" class="tweet-btn">Tweet</a>
-
-    <!-- Profile Actions -->
-    <div class="profile-actions">
-      <img src="./Assets/WhatsApp Image 2025-09-02 at 23.17.10_cdd40f0d.jpg" alt="Profile" class="profile-pic">
-      <div class="d-flex flex-column">
-        <span class="fw-bold">Sizwe Yende</span>
-        <span class="text-muted">@schabah13</span>
+    <!-- Left Sidebar -->
+    <div class="col-3 d-none d-lg-block">
+      <div class="sidebar d-flex flex-column">
+        <a href="#"><i class="bi bi-twitter fs-2 text-primary"></i></a>
+        <a href="#"><i class="bi bi-house-door-fill"></i> Home</a>
+        <a href="#"><i class="bi bi-hash"></i> Explore</a>
+        <a href="#"><i class="bi bi-bell"></i> Notifications</a>
+        <a href="#"><i class="bi bi-envelope"></i> Messages</a>
+        <a href="#"><i class="bi bi-bookmark"></i> Bookmarks</a>
+        <a href="#"><i class="bi bi-card-list"></i> Lists</a>
+        <a href="#"><i class="bi bi-person"></i> Profile</a>
+        <a href="#"><i class="bi bi-three-dots"></i> More</a>
+        <a href="#" class="tweet-btn">Tweet</a>
+        <div class="profile-actions">
+          <img src="./Assets/WhatsApp Image 2025-09-02 at 23.17.10_cdd40f0d.jpg" alt="Profile" class="profile-pic">
+          <div class="d-flex flex-column">
+            <span class="fw-bold">Sizwe Yende</span>
+            <span class="text-muted">@schabah13</span>
+          </div>
+          <i class="bi bi-three-dots ms-auto"></i>
+        </div>
       </div>
-      <i class="bi bi-three-dots ms-auto"></i>
     </div>
-  </div>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Main Feed -->
+    <div class="col-12 col-lg-6 p-0">
+      <!-- Title bar -->
+      <div class="title-bar d-flex justify-content-between align-items-center px-3 py-2">
+        <h5 class="fw-bold m-0">Home</h5>
+        <i class="bi bi-stars"></i>
+      </div>
+
+      <!-- Post Tweet Section -->
+      <div class="post-tweet d-flex p-3 border-bottom">
+        <img src="./Assets/WhatsApp Image 2025-09-02 at 23.17.10_cdd40f0d.jpg" class="profile-pic me-2" alt="profile">
+        <div class="w-100">
+          <textarea class="form-control tweet-input" placeholder="What's happening?" rows="2"></textarea>
+          <div class="d-flex justify-content-between align-items-center mt-2">
+            <div class="tweet-icons d-flex gap-3 text-primary">
+              <i class="bi bi-image"></i>
+              <i class="bi bi-filetype-gif"></i>
+              <i class="bi bi-emoji-smile"></i>
+              <i class="bi bi-calendar-event"></i>
+            </div>
+            <button class="btn btn-primary rounded-pill px-4 fw-bold">Tweet</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tweets Feed -->
+      <div id="tweets-feed">
+
+        <!-- Tweet 1 -->
+        <div class="tweet border-bottom p-3">
+          <div class="d-flex">
+            <img src="https://yt3.googleusercontent.com/e_s_ve_Xg0Y_aSaBrB32Ta_liMVQm7dbgccM8l9VI-rVVvjddHUtSXCFylFEwBcgJUR_8iN11A=s160-c-k-c0x00ffffff-no-rj" class="profile-pic me-2" alt="profile">
+            <div>
+              <strong>Fabrizio Romano</strong> <span class="text-muted">@FabrizioRomanoYT · 2h</span>
+              <p>🚨 Gigio Donnarumma to Manchester City! Deal done from PSG. Medical this afternoon.</p>
+              <div class="tweet-actions d-flex justify-content-between text-muted">
+                <i class="bi bi-chat"></i>
+                <i class="bi bi-arrow-repeat"></i>
+                <i class="bi bi-heart"></i>
+                <i class="bi bi-upload"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tweet 2 -->
+        <div class="tweet border-bottom p-3">
+          <div class="d-flex">
+            <img src="https://yt3.googleusercontent.com/BUiMEfBTJbxx-BV7kSiy8q1P9nDD3NoxXEY4SfzjIoNXc871wSSrog7wS88yQafAa8TtH1bqQQ=s160-c-k-c0x00ffffff-no-rj" class="profile-pic me-2" alt="profile">
+            <div>
+              <strong>Inkabi Records</strong> <span class="text-muted">@inkabirecords · 4h</span>
+              <p>Big Zulu (Ft Shwi Mntombazane)-Mthulise [Visualiser] OUT NOW!</p>
+              <div class="tweet-actions d-flex justify-content-between text-muted">
+                <i class="bi bi-chat"></i>
+                <i class="bi bi-arrow-repeat"></i>
+                <i class="bi bi-heart"></i>
+                <i class="bi bi-upload"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tweet 3 -->
+        <div class="tweet border-bottom p-3">
+          <div class="d-flex">
+            <img src="https://yt3.googleusercontent.com/gTrpCE8UEK0ZdYupILsLr8-vfDGPoslqsfNQvpotHUcA-AzgyEyfdffSfI4ImN0YPhJf86NlHA=s160-c-k-c0x00ffffff-no-rj" class="profile-pic me-2" alt="profile">
+            <div>
+              <strong>Big Brother Mzansi</strong> <span class="text-muted">@BBMzansiOfficial · 1h</span>
+              <p>Yolanda has been evicted from the game and will sureky be missed in the #BBMzansi house ! 😎</p>
+              <div class="tweet-actions d-flex justify-content-between text-muted">
+                <i class="bi bi-chat"></i>
+                <i class="bi bi-arrow-repeat"></i>
+                <i class="bi bi-heart"></i>
+                <i class="bi bi-upload"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tweet 4 -->
+        <div class="tweet border-bottom p-3">
+          <div class="d-flex">
+            <img src="https://yt3.ggpht.com/ytc/AIdro_mKzklyPPhghBJQH5H3HpZ108YcE618DBRLAvRUD1AjKNw=s68-c-k-c0x00ffffff-no-rj" class="profile-pic me-2" alt="profile">
+            <div>
+              <strong>Fireship</strong> <span class="text-muted">@Fireship · 3h</span>
+              <p>Learning JS is fun! 🔥</p>
+              <div class="tweet-actions d-flex justify-content-between text-muted">
+                <i class="bi bi-chat"></i>
+                <i class="bi bi-arrow-repeat"></i>
+                <i class="bi bi-heart"></i>
+                <i class="bi bi-upload"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tweet 5 -->
+        <div class="tweet border-bottom p-3">
+          <div class="d-flex">
+            <img src="https://yt3.ggpht.com/ytc/AIdro_mQczyuvnXgEq8fApoOXpG2Yw_JKYqRA7kVOhNFuHLz9Vc=s68-c-k-c0x00ffffff-no-rj" class="profile-pic me-2" alt="profile">
+            <div>
+              <strong>Kevin Powell</strong> <span class="text-muted">@KevinPowell · 5h</span>
+              <p>Responsive design is amazing! #WebDev</p>
+              <div class="tweet-actions d-flex justify-content-between text-muted">
+                <i class="bi bi-chat"></i>
+                <i class="bi bi-arrow-repeat"></i>
+                <i class="bi bi-heart"></i>
+                <i class="bi bi-upload"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tweet 6 -->
+        <div class="tweet border-bottom p-3">
+          <div class="d-flex">
+            <img src="https://yt3.googleusercontent.com/7_AEy7nfANZN3gVxUSdaXLL8bnwB1NQTljZLJVXaZuJFfSg27Qh7QD6ceZblD1Ae9jE-rmpn=s160-c-k-c0x00ffffff-no-rj" class="profile-pic me-2" alt="profile">
+            <div>
+              <strong>eNCA</strong> <span class="text-muted">@encanews · 6h</span>
+              <p>South Africa's Sanitation Institutions have signed a cooperation agreement with a Netherlands-based Institute for Water Education. The move is hailed as a crucial step towards addressing the country's worsening water crisis. #Today #DStv403 #QuestionThinkAct</p>
+              <div class="tweet-actions d-flex justify-content-between text-muted">
+                <i class="bi bi-chat"></i>
+                <i class="bi bi-arrow-repeat"></i>
+                <i class="bi bi-heart"></i>
+                <i class="bi bi-upload"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tweet 7 -->
+        <div class="tweet border-bottom p-3">
+          <div class="d-flex">
+            <img src="https://yt3.googleusercontent.com/QRIZ5NYZesAEG8IhqGmCOAO7yncUdyQBkyZoEgsmKHDYD5u30PJ34fInJLJyl9RLbzc2cpXWBA=s160-c-k-c0x00ffffff-no-rj" class="profile-pic me-2" alt="profile">
+            <div>
+              <strong>Orlando Pirates</strong> <span class="text-muted">@orlandopirates3 · 8h</span>
+              <p>Our Chairman Dr Irvin Khoza on his greatest players to ever don the Famous Black and white 🏴‍☠️🏴‍☠️</p>
+              <div class="tweet-actions d-flex justify-content-between text-muted">
+                <i class="bi bi-chat"></i>
+                <i class="bi bi-arrow-repeat"></i>
+                <i class="bi bi-heart"></i>
+                <i class="bi bi-upload"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Right Sidebar -->
+    <div class="col-3 d-none d-lg-block p-3">
+      <div class="right-sidebar sticky-top" style="top: 1rem;">
+        <!-- Trending -->
+        <div class="trending p-3 mb-3 rounded bg-light">
+          <h6 class="fw-bold mb-3">Trending</h6>
+          <div class="mb-2">
+            <small class="text-muted">#Tech · Trending</small>
+            <p class="mb-1 fw-bold">Bootstrap 5 Tips</p>
+            <small class="text-muted">12.3K Tweets</small>
+          </div>
+          <div class="mb-2">
+            <small class="text-muted">#WebDev · Trending</small>
+            <p class="mb-1 fw-bold">CSS Tricks</p>
+            <small class="text-muted">8.5K Tweets</small>
+          </div>
+          <div class="mb-2">
+            <small class="text-muted">#JavaScript · Trending</small>
+            <p class="mb-1 fw-bold">ES2025 Features</p>
+            <small class="text-muted">15K Tweets</small>
+          </div>
+        </div>
+
+        <!-- Who to Follow -->
+        <div class="who-to-follow p-3 rounded bg-light">
+          <h6 class="fw-bold mb-3">Who to follow</h6>
+          <div class="d-flex align-items-center mb-3">
+            <img src="https://yt3.googleusercontent.com/TEW6YZucDeeiXog1-FAZJj_OlJAwBV2DhXMDPq6qyNs-mDyfLFXqzj3GbSVMDPL748KdJZVkk6k=s160-c-k-c0x00ffffff-no-rj" class="profile-pic me-2" alt="profile">
+            <div class="flex-grow-1">
+              <strong>Asanda Empires</strong>
+              <div class="text-muted">@asandaempires</div>
+            </div>
+            <button class="btn btn-outline-dark btn-sm rounded-pill">Follow</button>
+          </div>
+          <div class="d-flex align-items-center mb-3">
+            <img src="https://yt3.ggpht.com/ERrsBBbmp1fh6csNPwZhZriLS-sGx3-0oVbeSUdg760Gb9dTAocwFhA6mCvnNzkNP2qEvnckTKU=s68-c-k-c0x00ffffff-no-rj" class="profile-pic me-2" alt="profile">
+            <div class="flex-grow-1">
+              <strong>Smash Sports</strong>
+              <div class="text-muted">@smashh14</div>
+            </div>
+            <button class="btn btn-outline-dark btn-sm rounded-pill">Follow</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
